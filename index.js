@@ -90,6 +90,8 @@ console.log(jordan.toString)
  function Car(model, milesPerGallon) {
     this.tank= 0;
     this.odometer= 0;
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
   }
   Car.prototype.fill = function(gallons){
     return this.tank += gallons;
