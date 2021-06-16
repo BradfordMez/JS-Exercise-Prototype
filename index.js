@@ -111,6 +111,7 @@ console.log(jordan.toString)
    this.favoriteToy = favoriteToy
   }
  
+Baby.prototype = Object.create(Person.prototype);
 Baby.prototype.play = function(){
   return `Playing with ${this.favoriteToy}.`
 }
