@@ -87,11 +87,9 @@ console.log(jordan.toString)
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
   
- function Car(tank, odometer) {
+ function Car(model, milesPerGallon) {
     this.tank= 0;
     this.odometer= 0;
-    this.model = model;
-    this.milesPerGallon = milesPerGallon;
   }
   Car.prototype.fill = function(gallons){
     return this.tank += gallons;
@@ -107,10 +105,14 @@ console.log(jordan.toString)
           + Should return a string "Playing with x", x being the favorite toy.
   */
  function Baby(name, age, favoriteToy) {
-   
+   Person.call(this, name, age);
+   this.favoriteToy = favoriteToy
   }
  
-  
+Baby.prototype.play = function(){
+  return `Playing with ${this.favoriteToy}.`
+}
+
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
